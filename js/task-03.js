@@ -12,3 +12,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// получаем ссылку на тег "список"
+const htmlGallery = document.querySelector(".gallery");
+// создаем пустую строку, в которую будем добавлять создаваемые элементы списка
+let htmlGalleryItems = "";
+
+// перебираем массив, создавая из каждого объекта строку
+images.forEach(element => {
+  const { url, alt } = element; 
+
+  // добавляем строку с кодом к уже существующей
+  htmlGalleryItems += `<li class="gallery__item"><img class="gallery__img" src="${url}" alt="${alt}"></li>`;
+});
+
+// вставляем получившуюся строку после объявления списка
+htmlGallery.insertAdjacentHTML("afterbegin", htmlGalleryItems);
