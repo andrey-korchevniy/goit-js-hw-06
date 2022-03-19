@@ -2,7 +2,7 @@ const listOfCategories = document.querySelectorAll('#categories .item');
 
 //Выводим на экран количество категорий (длина массива)
 console.log(`Number of categories: ${listOfCategories.length}`);
-// Пустая строка
+// Пустая строка как в дз
 console.log(' '); 
 
 // Перебираем категории и для каждой выводим имя и количество элементов
@@ -12,7 +12,7 @@ listOfCategories.forEach(category => {
 
     console.log(`Category: ${getNameOfCategory(category)}`);
     console.log(`Elements: ${listOfElements.length}`);
-    // Пустая строка
+    // Пустая строка как в дз
     console.log(' ');
 });
 
